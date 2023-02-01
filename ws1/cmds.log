@@ -1,0 +1,95 @@
+    1  pwd
+    2  exit
+    3  passwd
+    4  wget www.github.com
+    5  git --version
+    6  git --update
+    7  git --h
+    8  git --help
+    9  git help -u
+   10  git --version
+   11  git update
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd peter23sp
+   16  ls
+   17  cd ..
+   18  cd ~
+   19  ls
+   20  path
+   21  pwd
+   22  mkdir cs131
+   23  ls
+   24  cd cs131
+   25  git init
+   26  ls
+   27  touch test.txt
+   28  ls
+   29  git status
+   30  git add test.txt
+   31  ls
+   32  git status
+   33  git commit -m "Testing first commit."
+   34  run git config --global user.email pfarrow75@gmail.com
+   35  git config --global user.email pfarrow75@gmail.com
+   36  git commit -m "Testing first commit."
+   37  git config --global user.email pfarrow75@gmail.com
+   38  git commit -m "Testing first commit."
+   39  git config --global user.email pfarrow75@gmail.com
+   40  git config --global  pfarrow75@gmail.com
+   41  git config --global user.email pfarrow75@gmail.com
+   42  git commit -m "Testing first commit."
+   43  git config --global user.email "pfarrow75@gmail.com"
+   44  git commit -m "Testing first commit."
+   45  git status
+   46  git config --global user.name "pfarrow75"
+   47  wget github.com
+   48  git status
+   49  git commit -m "testing"
+   50  ls
+   51  git checkout -b mybranch
+   52  ls
+   53  git status
+   54  git branch
+   55  git push origin mybranch
+   56  git remote add origin https://github.com/pfarrow75/cs131.git
+   57  git push -u origin master
+   58  git remote add origin www.github.com/pfarrow75/cs131.git
+   59  git push -u origin master
+   60  ssh www.github.com
+   61  ssh https://github.com/
+   62  ssh https://github.com
+   63  ls -al ~/.ssh
+   64  clear
+   65  git push -u origin master
+   66  ssh-keygen -t ed25519 -C "pfarrow75@gmail.com"
+   67  ls -al ~/.ssh
+   68  ls
+   69  eval "$(ssh-agent -s)"
+   70  ssh-add ~/.ssh/id_ed25519
+   71  ssh-add ssh.txt
+   72  clip < ssh.txt.pub
+   73  clip
+   74  xclip -sel c < ssh.txt.pub
+   75  copy ssh.txt.pub
+   76  cat ssh.txt.pub
+   77  git push -u origin master
+   78  ssh -T git@github.com
+   79  git push -u origin master
+   80  git config credential.helper store
+   81  git push https://github.com/pfarrow75/cs131.git -m "testing"
+   82  git push https://github.com/pfarrow75/cs131.git
+   83  remote: Support for password authentication was removed on August 13, 2021.
+   84  remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+   85  fatal: Authentication failed for 'https://github.com/pfarrow75/cs131.git/'
+   86  git config --global user.name "pfarrow75"
+   87  git config --global user.email "pfarrow75@gmail.com"
+   88  git config -l
+   89  git push https://github.com/pfarrow75/cs131.git
+   90  mk dir ws1
+   91  ls
+   92  mkdir ws1
+   93  ls
+   94  cd ws1
+   95  history > cmds.log

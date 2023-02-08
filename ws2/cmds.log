@@ -1,0 +1,237 @@
+    1  pwd
+    2  exit
+    3  passwd
+    4  wget www.github.com
+    5  git --version
+    6  git --update
+    7  git --h
+    8  git --help
+    9  git help -u
+   10  git --version
+   11  git update
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd peter23sp
+   16  ls
+   17  cd ..
+   18  cd ~
+   19  ls
+   20  path
+   21  pwd
+   22  mkdir cs131
+   23  ls
+   24  cd cs131
+   25  git init
+   26  ls
+   27  touch test.txt
+   28  ls
+   29  git status
+   30  git add test.txt
+   31  ls
+   32  git status
+   33  git commit -m "Testing first commit."
+   34  run git config --global user.email pfarrow75@gmail.com
+   35  git config --global user.email pfarrow75@gmail.com
+   36  git commit -m "Testing first commit."
+   37  git config --global user.email pfarrow75@gmail.com
+   38  git commit -m "Testing first commit."
+   39  git config --global user.email pfarrow75@gmail.com
+   40  git config --global  pfarrow75@gmail.com
+   41  git config --global user.email pfarrow75@gmail.com
+   42  git commit -m "Testing first commit."
+   43  git config --global user.email "pfarrow75@gmail.com"
+   44  git commit -m "Testing first commit."
+   45  git status
+   46  git config --global user.name "pfarrow75"
+   47  wget github.com
+   48  git status
+   49  git commit -m "testing"
+   50  ls
+   51  git checkout -b mybranch
+   52  ls
+   53  git status
+   54  git branch
+   55  git push origin mybranch
+   56  git remote add origin https://github.com/pfarrow75/cs131.git
+   57  git push -u origin master
+   58  git remote add origin www.github.com/pfarrow75/cs131.git
+   59  git push -u origin master
+   60  ssh www.github.com
+   61  ssh https://github.com/
+   62  ssh https://github.com
+   63  ls -al ~/.ssh
+   64  clear
+   65  git push -u origin master
+   66  ssh-keygen -t ed25519 -C "pfarrow75@gmail.com"
+   67  ls -al ~/.ssh
+   68  ls
+   69  eval "$(ssh-agent -s)"
+   70  ssh-add ~/.ssh/id_ed25519
+   71  ssh-add ssh.txt
+   72  clip < ssh.txt.pub
+   73  clip
+   74  xclip -sel c < ssh.txt.pub
+   75  copy ssh.txt.pub
+   76  cat ssh.txt.pub
+   77  git push -u origin master
+   78  ssh -T git@github.com
+   79  git push -u origin master
+   80  git config credential.helper store
+   81  git push https://github.com/pfarrow75/cs131.git -m "testing"
+   82  git push https://github.com/pfarrow75/cs131.git
+   83  remote: Support for password authentication was removed on August 13, 2021.
+   84  remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+   85  fatal: Authentication failed for 'https://github.com/pfarrow75/cs131.git/'
+   86  git config --global user.name "pfarrow75"
+   87  git config --global user.email "pfarrow75@gmail.com"
+   88  git config -l
+   89  git push https://github.com/pfarrow75/cs131.git
+   90  mk dir ws1
+   91  ls
+   92  mkdir ws1
+   93  ls
+   94  cd ws1
+   95  history > cmds.log
+   96  ls
+   97  cd ..
+   98  git add ws1
+   99  ls
+  100  hit status
+  101  git status
+  102  git push https://github.com/pfarrow75/cs131.git
+  103  git status
+  104  git commit -m "ws1 completed I think"
+  105  git push https://github.com/pfarrow75/cs131.git
+  106  ls
+  107  git merge mybranch origin
+  108  git merge mybranch master
+  109  git merge mybranch main
+  110  git push origin mybranch:main
+  111  git branch
+  112  git branch
+  113  git status
+  114  dc ..
+  115  cd ..
+  116  ls
+  117  mv cs131/ cs131.save
+  118  ls
+  119  git clone git@github.com:pfarrow75/cs131.git
+  120  ls
+  121  ls cs131.save
+  122  cd cs131.save/
+  123  cp -r . ../cs131
+  124  cd ..
+  125  ls
+  126  cd cs131
+  127  ls
+  128  git status
+  129  git branch
+  130  git checkout main
+  131  cd ..
+  132  ls
+  133  rm -rf ./cs131
+  134  ls
+  135  git clone git@github.com:pfarrow75/cs131.git
+  136  ls
+  137  cd cs131
+  138  ls
+  139  git status
+  140  cp -r ../cs131.save/* .
+  141  ls
+  142  git status
+  143  git branches -a
+  144  git branch
+  145  ls -l ~/.ssh
+  146  mv ssh.* ~/.ssh
+  147  ls
+  148  git add . 
+  149  git commit -m "Submitting ws1"
+  150  git push origin main
+  151  git remote add origin www.github.com/pfarrow75/cs131.git
+  152  exit
+  153  ls
+  154  echo $SHELL
+  155  cpuinfo
+  156  ls
+  157  cd ..
+  158  ls
+  159  cd peterf23sp
+  160  ls
+  161  cd ..
+  162  peter23sp
+  163  cd peter23sp
+  164  ls
+  165  cd ..
+  166  cd peterf23sp/
+  167  ls
+  168  cd cs131
+  169  git branch
+  170  exit
+  171  ls
+  172  cd cs 131
+  173  ls
+  174  cd cs131
+  175  ls
+  176  git branch
+  177  mkdir ws2
+  178  ls
+  179  cd ws2
+  180  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  181  ls
+  182  grep amazon_reviews_us_Books_v1_02.tsv.gz "verified" verified.txt
+  183  grep "verified" amazon_reviews_us_Books_v1_02.tsv.gz verified.txt
+  184  ls
+  185  vi verified.txt
+  186  grep "verified" amazon_reviews_us_Books_v1_02.tsv.gz verified.txt
+  187  cat verified.txt 
+  188  grep "verified" amazon_reviews_us_Books_v1_02.tsv.gz 
+  189  cat amazon_reviews_us_Books_v1_02.tsv.gz 
+  190  clear
+  191  gunzip amazon_reviews_us_Books_v1_02.tsv.gz 
+  192  ls
+  193  grep "verified" amazon_reviews_us_Books_v1_02.tsv
+  194  cat amazon_reviews_us_Books_v1_02.tsv 
+  195  vi amazon_reviews_us_Books_v1_02.tsv 
+  196  ls
+  197  cd cs131
+  198  ls
+  199  cd ws2
+  200  ls
+  201  cat amazon_reviews_us_Books_v1_02.tsv 
+  202  grep "quit" amazon_reviews_us_Books_v1_02.tsv 
+  203  sed -n '1{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  204  sed -n '2{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  205  sed -n '3{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  206  sed -n '4{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  207  sed -n '5{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  208  grep " N       N " amazon_reviews_us_Books_v1_02.tsv 
+  209  grep "N" amazon_reviews_us_Books_v1_02.tsv 
+  210  grep ",N," amazon_reviews_us_Books_v1_02.tsv 
+  211  grep -w  "N" amazon_reviews_us_Books_v1_02.tsv 
+  212  sed -n '4{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  213  sed -n '3{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  214  sed -n '2{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  215  sed -n '1{p;q}' amazon_reviews_us_Books_v1_02.tsv 
+  216  grep  "\tN\tN" amazon_reviews_us_Books_v1_02.tsv 
+  217  cut -d"/t" -f12,15
+  218  cut --help
+  219  cut -d"TAB" -f12,15
+  220  cut -d"DELIM" -f12,15
+  221  cut -d$"/t" -f12,15
+  222  cut -d$"\t" -f12,15
+  223  cut -f12,15 -d$'\t'
+  224  cut -f12,15 -d$'\t' amazon_reviews_us_Books_v1_02.tsv 
+  225* 
+  226  cut -f12,14 -d$'\t' amazon_reviews_us_Books_v1_02.tsv | grep -w "N" 
+  227  cut -f12,14 -d$'\t' amazon_reviews_us_Books_v1_02.tsv | grep -w "Y" 
+  228  cut -f12,14 -d$'\t' amazon_reviews_us_Books_v1_02.tsv | grep -w "N" | wc -l > count.txt 
+  229  ls -lah 
+  230* 
+  231  cut -f12,14 -d$'\t' amazon_reviews_us_Books_v1_02.tsv | grep -w "N" | wc -l >>  count.txt 
+  232  cat count.txt 
+  233  cut -f12,14 -d$'\t' amazon_reviews_us_Books_v1_02.tsv | grep -w "Y" | wc -l >>  count.txt 
+  234  cat count.txt 
+  235  vi count.txt 
+  236  cat count.txt 
+  237  history > cmds.log

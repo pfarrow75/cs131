@@ -1,0 +1,49 @@
+2.pwd > a1.txt /mnt/scratch/peterf23sp/cs131/a1
+3.id >> a1.txt  uid=1057(peterf23sp) gid=1059(peterf23sp) groups=1059(peterf23sp)
+4.cd temp >> a1.txt Permission Denied
+ls -la temp >> a1.txt 
+Permission Denied
+total 0
+d????????? ? ? ? ?            ? .
+d????????? ? ? ? ?            ? ..
+ls -l temp >> a1.txt total 0
+ echo hello > temp/hello.txt Permission Denied
+5. mkdir temp2
+mv temp2 temp3
+ls =
+a1.txt
+temp
+temp3
+does not copy directory
+cp temp3 temp2 does not work without -r
+cp -r temp3 temp2
+ls =
+a1.txt
+temp
+temp2
+temp3
+6.
+ls /proc | grep cpu >> a1.txt cpuinfo
+ls /proc | grep mem >> a1.txt 
+iomem
+meminfo
+7.
+head -1 /proc/meminfo >> a1.txt MemTotal:       73080640 kB
+8. cat /proc/cpuinfo shows 256 processors with POWER8 (architeched)
+all look like this 
+head -4 /proc/cpuinfo >> a1.txt
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+9. stat -c%s tweets.csv >> a1.txt 7822180
+size is in bytes = 0.00782218 gb
+wc -l tweets.csv >> a1.txt 110350 tweets.csv
+10. grep -i great tweets.csv | wc >> a1.txt     57     114    4582
+11. file -i tweets.cv >> a1.txt tweets.csv: text/plain; charset=utf-8
+12. iconv -f UTF-8 -t ASCII//TRANSLIT < tweets.csv > tweetsASCII.csv
+13. author,hashtags,date,id
+unique users 177 users.csv -1 = 176
+unique hashtags 20134 uniqueHashtags2.csv -1 = 20133
+unique tweets 64698 tweets.csv -1 = 64697
+less hashtags than tweets

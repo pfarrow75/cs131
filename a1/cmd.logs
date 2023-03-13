@@ -374,19 +374,23 @@
   374  ls
   375  cd cs131
   376  ls
+  1.)
   377  mkdir a1
   378  ls
   379  cd a1
   380  ls
+  2.)
   381  pwd
   382  pwd > a1.txt
   383  ls
   384  vi a1.txt
+  3.)
   385  id
   386  id >> a1.txt
   387  vi a1.txt 
   388  ls
   389  vi a1.txt 
+  4.)
   390  mkdir temp
   391  ls -ld
   392  ls -l
@@ -429,6 +433,7 @@
   429  echo hello temp/hello.txt
   430  echo hello > temp/hello.txt
   431  vi a1.txt
+  5.)
   432  mkdir temp2
   433  ls
   434  mv temp2 temp3
@@ -450,6 +455,7 @@
   450  ls
   451  ls >> a1.txt
   452  vi a1.txt 
+  6.)
   453  ls /proc/cpuinfo
   454  ls -la /proc/cpuinfo
   455  cat /proc/cpuinfo
@@ -463,15 +469,18 @@
   463  vi
   464  ls
   465  vi a1.txt 
+  7.)
   466  head -10 /proc/meminfo
   467  head -1 /proc/meminfo >> a1.txt
   468  vi a1.txt 
   469  cat /proc/cpuinfo
   470  cat /proc/cpuinfo | grep architecture
   471  vi a1.txt 
+  8.)
   472  head -4 /proc/cpuinfo >> a1.txt 
   473  vi a1.txt 
   474  ls
+  9.)
   475  cp /home/test/A1/downloaded_hashtags_extend.csv tweets.csv
   476  ls
   477  head -5 tweets.csv 
@@ -484,9 +493,11 @@
   484  wc -l tweets.csv 
   485  wc -l tweets.csv >> a1.txt 
   486  vi a1.txt 
+  10.)
   487  grep -i great tweets.csv | wc 
   488  grep -i great tweets.csv | wc >> a1.txt
   489  vi a1.txt 
+  11.)
   490  file -i tweets.csv 
   491  file -i tweets.csv >> a1.txt
   492  vi a1.txt 
@@ -495,6 +506,7 @@
   495  cd cs131
   496  cd a1/
   497  ls
+  12.)
   498  iconv -f UTF8 -t ASCII < tweests.csv > tweetsASCII.csv
   499  iconv -f UTF8 -t ASCII < tweets.csv > tweetsASCII.csv
   500  file -i tweets.csv 
@@ -514,6 +526,7 @@
   514  rm tweetsASCII.csv 
   515  ls
   516  iconv -f UTF-8 -t ASCII//TRANSLIT < tweets.csv > tweetsASCII.csv
+  13.)
   517  wc -c tweetsASCII.csv 
   518  head -1 tweetsASCII.csv 
   519  head -1 tweetsASCII.csv >> a1.txt

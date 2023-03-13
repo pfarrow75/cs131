@@ -1,0 +1,109 @@
+1
+    1  history
+    2  pwd
+    3  ls
+    4  head -1 reTweets.tsv 
+    5  head -10 originalTweets.tsv 
+    6  grep replied_to originalTweets.tsv 
+    7  head -1 originalTweets.tsv 
+    8  grep replied_to originalTweets.tsv | sort | uniq -c | sort -n | head -10
+    9  grep replied_to originalTweets.tsv | sort
+   10  grep replied_to originalTweets.tsv | cut -d&"\t" -f1 | sort | uniq -c | sort -n | head -10
+   11  grep replied_to originalTweets.tsv | cut -f1 -d&'\t' | sort | uniq -c | sort -n | head -10
+   12  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c | sort -n | head -10
+   13  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' 
+   14  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort 
+   15  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c 
+   16  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c | sort -rn | head -10
+   17  cat originalTweets.tsv 
+   18  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | head -10 
+   19  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | less
+   20  grep replied_to originalTweets.tsv 
+   21  head -1 originalTweets.tsv 
+   22  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -n
+   23  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+   24  ls
+   25  cat a2.txt
+   26  vi a2.txt 
+   27  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txtgrep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+2   
+   28  vi a2.txt 
+   29  ls
+   30  rm a2.txtgrep 
+   31  ls
+   32  grep replied_to originalTweets.tsv
+   33  grep replied_to originalTweets.tsv | cut -f5 -d$'\t'
+   34  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' 
+   35  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+   36  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'=' >> IdsRepliedTo.txt
+   37  ls
+   38  for i in $(ls); do echo i ; ; 
+   39  for i in $(ls); do echo i ; done
+   40  for i in $(ii); do echo $i ; done
+   41  for i in $(for i in $(ii); do echo $i ; done); do echo $i ; done
+   42  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+   43* 
+   44  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+   45  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do echo $i ; done
+   46  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i originalTweets.tsv ; done
+   47  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,f2 -d$'\t' | grep $i originalTweets.tsv ; done
+   48  cut -f1,f2 -d$'\t' originalTweets.tsv >> grepAuthor.txt
+   49  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,2 -d$'\t' | grep $i  ; done
+   50  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,2 -d$'\t' originalTweets.tsv | grep $i  ; done
+   51* for i in $(IdsRepliedTo.txt); do cut -f1,2 -d$'\t' originalTweets.tsv | grep $i >> test.txt  ; done
+   52  ls
+   53  cat IdsRepliedTo.txt 
+   54  sort IdsRepliedTo.txt 
+   55  uniq -c IdsRepliedTo.txt 
+   56  ls
+   57  head -4 IdsRepliedTo.txt 
+   58  cat IdsRepliedTo.txt 
+   59  ls
+   60  cat grepAuthor.txt 
+   61  wc grepAuthor.txt 
+   62  cut -f1,2 -d'\t' originalTweets.tsv >> grepAuthor.txt 
+   63  cut -f1,2 -d$'\t' originalTweets.tsv >> grepAuthor.txt 
+   64  cat grepAuthor.txt 
+   65  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do echo $i  ; done
+   66  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt  ; done
+   67  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt > tRt.txt ; done
+   68  ls
+   69  wc grepAuthor.txt 
+   70  wc tRt.txt 
+   71  cat tRt.txt
+   72  rm tRt.txt 
+   73  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt >> tRt.txt ; done
+   74  wc -l grepAuthor.txt 
+   75  wc -l tRt.txt 
+   76  cut -f2 -d$'\t' tRt.txt | sort | uniq -c | sort -rn | head -10
+   77  cut -f2 -d$'\t' tRt.txt | sort | uniq -c | sort -rn | head -10 >> a2.txt 
+   78  ls
+   79  vi a2.txt 
+3   
+   80  3.)
+   81  history
+   82  clear
+   83  ls
+   84  cat reTweets.tsv 
+   85  grep retweeted reTweets.tsv | cut -f2, -d$'\t' | sort | uniq -c | sort -rn | head -10
+   86  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10
+   87  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+   88  vi a2.txt 
+   89  head -1 reTweets.tsv 
+   90  cut -f4 -d$'\t' reTweets.tsv 
+   91  cut -f4 -d$'\t' reTweets.tsv | sort
+   92  cut -f4 -d$'\t' reTweets.tsv | sort | uniq -c | sort -rn | head -30
+   93  cut -f4 -d$'\t' reTweets.tsv | sort | uniq -c | sort -rn | head -30 >> a2.txt
+   94  a2.txt
+   95  vi a2.txt 
+4   
+   96  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txtgrep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+   97  vi a2.txt 
+   98  ls
+   99  rm a2.txtgrep 
+  100  ls
+  101  rm grepAuthor.txt 
+  102  rm IdsRepliedTo.txt 
+  103  git status
+  104  git add a2.txt 
+  105  history >> cmd.logs

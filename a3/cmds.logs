@@ -1,0 +1,85 @@
+    1  history
+    2  1
+    3  ls
+    4  head -5 tweets.tsv 
+    5  grep replied_to tweets.tsv | cut -f2,6 -d$'\t' >> task1.txt
+    6  vi task1.txt 
+    7  cat task1.txt 
+    8  wc -l task1.txt 
+    9  head -1 tweets.tsv 
+   10  head -2 tweets.tsv 
+   11  grep replied_to tweets.tsv 
+   12  head -1 tweets.tsv 
+   13  awk '{count[$1]++; if (count[$1] > 3) print}' task2.txt
+   14  awk '{count[$1]++; if (count[$1] > 3) print}' task1.txt >> task2.txt
+   15  ls
+   16  grep replied_to tweets.tsv | cut -f2,6 -d$'\t' >> check.txt
+   17* sort check.txt | uniq -c >> 
+   18  rm check.txt 
+   19  ls
+   20  grep replied_to tweets.tsv | cut -f2 -d$'\t' | sort | uniq -c >> check.txt
+   21  head - 10 check.txt 
+   22  head -10 check.txt 
+   23  grep 1155192156 task2.txt 
+   24  grep 118166719 task2.txt 
+   25  gnuplot
+   26  find / -name \*gnuplot\* 
+   27  find / -name \*gnuplot\* | grep -v denied
+   28  find / -name \*gnuplot\* 2>&1 | grep -v denied
+   29  echo $SHELL
+   30  ls
+   31  vi ~/.bashrc
+   32  which gnuplot
+   33  apt-get update
+   34  apt-get install gnuplot
+   35  id
+   36  guid
+   37  wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz
+   38  gzip -d gnuplot-5.4.6.tar.gz
+   39  tar xvf gnuplot-5.4.6.tar
+   40  cd gnuplot-5.4.6/
+   41  ./configure --disable-dependency-tracking
+   42  make
+   43  make check
+   44  ls
+   45  pwd
+   46   cd src
+   47  ls
+   48  ./gnuplot
+   49  ls
+   50  cd ..
+   51  ls
+   52  cd ..
+   53  ls
+   54  head -5 task2.txt
+   55  cut -f2 -d$'\t' task2.txt >> replied_to_users.txt
+   56  head -3 replied_to_users.txt 
+   57  sort replied_to_users.txt 
+   58  sort replied_to_users.txt | uniq -c >> user_count.txt
+   59  head -6 user_count.txt 
+   60  sort -n user_count.txt 
+   61  sort -nr user_count.txt 
+   62  gnuplot
+   63  cd gnuplot-5.4.6/
+   64  ls
+   65  cd src/
+   66  ls
+   67  ./gnuplot 
+   68  ls
+   69  cat h1.svg
+   70  bat 
+   71  catigm
+   72  catimg
+   73  ls
+   74  ./gnuplot 
+   75  rm h1.svg 
+   76  ./gnuplot 
+   77  cd ..
+   78  ls
+   79  git add task1.txt
+   80  git status
+   81  git add task2.txt
+   82  git add gnuplot-5.4.6/src/h1.svg
+   83  git status
+   84  git add gnuplot-5.4.6/src/h4.svg
+   85  history > cmds.logs

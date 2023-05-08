@@ -1,246 +1,1000 @@
-  111  history
-  112  head -4 tweets.csv 
-  113  cut -f3,7 tweets.csv 
-  114  cut -f7 tweets.csv 
-  115  cut -f8 tweets.csv 
-  116  grep 'replied' tweets.csv 
-  117  cut -f5 tweets.csv 
-  118  vi splitter.sh
-  119  ls
-  120  head -1 tweets.csv 
-  121  id      author  date    hashtags        referenced      in_reply_to_user_id     public_metrics  text_nolf
-  122  grep 'type=retweeted' > retweeted_tweets.csv
-  123  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
-  124  grep 'type=replied_to' tweets.csv > retweeted_tweets.csv
-  125  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" file.tsv > filtered_file.tsv
-  126  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
-  127  grep type original_tweets.tsv 
-  128  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
-  129  grep type original_tweets.tsv 
-  130  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
-  131  wc -l retweeted_tweets.csv 
-  132  grep 'type=replied_to' tweets.csv > replied_tweets.csv
-  133  wc -l replied_tweets.csv 
-  134  wc -l tweets.csv 
-  135  wc -l original_tweets.tsv 
-  136  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsvrm original_tweets.tsv 
-  137  ls
-  138  rm original_tweets.tsv
-  139  rm original_tweets.tsvrm 
-  140  grep -v 'type=replied' tweets.csv | grep -v 'type=retweeted' > original_tweets.csv
-  141  wc -l original_tweets.csv 
-  142  vi plotter.plt
-  143  ls
-  144  gnuplot
-  145  gnuplot --version
-  146  apt-get install gnuplot
-  147  pip install gnuplot
-  148  cd ..
-  149  cd a3
-  150  gnuplot --version
-  151  cd ..
-  152  cd a5
-  153  ls
-  154  wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz
-  155  gzip -d gnuplot-5.4.6.tar.gz
-  156  tar xvf gnuplot-5.4.6.tar
-  157  cd gnuplot-5.4.6/
-  158  ./configure --disable-dependency-tracking
-  159  make
-  160  make check
-  161  ls
-  162  cd src
+   50  ls
+   51  cd a1/
+   52  ls
+   53  rm a1.txtcp
+   54  ls
+   55  vi a1.txt
+   56  ls -l temp
+   57  cd temp
+   58  ls temp
+   59  ls -la temp
+   60  vi a1.txt
+   61  echo hello
+   62  echo hello temp/hello.txt
+   63  echo hello > temp/hello.txt
+   64  vi a1.txt
+   65  mkdir temp2
+   66  ls
+   67  mv temp2 temp3
+   68  ls
+   69  cd temp3
+   70  ls
+   71  cd ..
+   72  ls
+   73  vi a1.txt 
+   74  ls >> a1.txt
+   75  ls
+   76  vi a1.txt 
+   77  cp temp3 temp2
+   78  ls
+   79  cp temp3 temp2 >> a1.txt 
+   80  vi a1.txt 
+   81  cp -r temp3 temp2 >> a1.txt 
+   82  ;s
+   83  ls
+   84  ls >> a1.txt
+   85  vi a1.txt 
+   86  ls /proc/cpuinfo
+   87  ls -la /proc/cpuinfo
+   88  cat /proc/cpuinfo
+   89  grep "cpu"  /proc/cpuinfo
+   90  ls /proc 
+   91  cat /proc/meminfo
+   92  ls /proc | grep cpu
+   93  ls /proc | grep cpu >> a1.txt
+   94  ls /proc | grep mem >> a1.txt
+   95  vi a1
+   96  vi
+   97  ls
+   98  vi a1.txt 
+   99  head -10 /proc/meminfo
+  100  head -1 /proc/meminfo >> a1.txt
+  101  vi a1.txt 
+  102  cat /proc/cpuinfo
+  103  cat /proc/cpuinfo | grep architecture
+  104  vi a1.txt 
+  105  head -4 /proc/cpuinfo >> a1.txt 
+  106  vi a1.txt 
+  107  ls
+  108  cp /home/test/A1/downloaded_hashtags_extend.csv tweets.csv
+  109  ls
+  110  head -5 tweets.csv 
+  111  cat tweets.csv 
+  112  ls -la 
+  113  stat -c%s tweets.csv
+  114  stat -c%s tweets.csv >> a1.txt
+  115  vi a1.txt 
+  116  wc tweets.csv 
+  117  wc -l tweets.csv 
+  118  wc -l tweets.csv >> a1.txt 
+  119  vi a1.txt 
+  120  grep -i great tweets.csv | wc 
+  121  grep -i great tweets.csv | wc >> a1.txt
+  122  vi a1.txt 
+  123  file -i tweets.csv 
+  124  file -i tweets.csv >> a1.txt
+  125  vi a1.txt 
+  126  exit
+  127  ls
+  128  cd cs131
+  129  cd a1/
+  130  ls
+  131  iconv -f UTF8 -t ASCII < tweests.csv > tweetsASCII.csv
+  132  iconv -f UTF8 -t ASCII < tweets.csv > tweetsASCII.csv
+  133  file -i tweets.csv 
+  134  iconv -f UTF-8 -t ASCII < tweets.csv > tweetsASCII.csv
+  135  ls
+  136  cat tweetsASCII.csv 
+  137  wc tweetsASCII.csv 
+  138  wc -h
+  139  wc --help
+  140  wc -c tweets.csv 
+  141  wc -c tweetsASCII.csv 
+  142  iconv -f UTF-8 -t ASCII < tweets.csv > tweetsASCII.csv
+  143  file -i tweets.csv 
+  144  iconv -f UTF-8 -t ASCII//TRANSLIT < tweets.csv > tweetsASCII.csv
+  145  wc -c tweetsASCII.csv 
+  146  wc -c tweets.csv 
+  147  rm tweetsASCII.csv 
+  148  ls
+  149  iconv -f UTF-8 -t ASCII//TRANSLIT < tweets.csv > tweetsASCII.csv
+  150  wc -c tweetsASCII.csv 
+  151  head -1 tweetsASCII.csv 
+  152  head -1 tweetsASCII.csv >> a1.txt
+  153  vi a1.txt 
+  154  uniq -c tweetsASCII.csv > uniqTweetsASCII.csv
+  155  ls
+  156  head -3 uniqTweetsASCII.csv 
+  157  cut -f1 -d$'\t' uniqTweetsASCII.csv 
+  158  cut -f1 -d$',' uniqTweetsASCII.csv
+  159  cut -f1 -d$',' uniqTweetsASCII.csv > uniqueUsers.csv
+  160  ls
+  161  wc --help
+  162  wc -l uniqUsers.csv
   163  ls
-  164  pwd
-  165  vi plotter.plt
-  166  find plotter.plt
-  167  chmod +x plotter.plt 
+  164  wc -l uniqueUsers.csv
+  165  wc -l uniqueUsers.csv >> a1.txt
+  166  vi a1.txt 
+  167  cut -f2 -d$',' uniqTweetsASCII.csv > uniqueHashtagscsv
   168  ls
-  169  gnuplot plotter.plt 
-  170  ./gnuplot plotter.plt
-  171  cd ..
-  172  l
-  173  cd ..
-  174  ls
-  175  cd gnuplot-5.4.6/
-  176  cd src/
-  177  vi plotter.plt 
-  178  ./gnuplot plotter.plt
-  179  "plotter.plt" line 7: Both parameters to strptime must be strings
-  180  vi plotter.plt 
-  181  ./gnuplot plotter.plt
-  182  "plotter.plt" line 7: f_sprintf: attempt to print numeric value with string format
-  183  vi plotter.plt 
-  184  ./gnuplot plotter.plt
-  185  cd ..
-  186  head -2 original_tweets.csv 
-  187  cd gnuplot-5.4.6/
-  188  cd src/
-  189  vi plotter.plt 
-  190  ./gnuplot plotter.plt
-  191  vi plotter.plt 
-  192  ./gnuplot plotter.plt
-  193  vi plotter.plt 
-  194  ./gnuplot plotter.plt
-  195  ls
-  196  rm original_times.svg 
-  197  vi plotter.plt 
-  198  ./gnuplot plotter.plt
-  199  git status
-  200  git add original_times.svg 
-  201  cd ..
-  202  git commit -m "checking svg errors"
-  203  git push
-  204  git status
-  205  git push
-  206  git push https://github.com/pfarrow75/cs131
-  207  head -4 original_tweets.csv 
-  208  cut -f3 > filtered_originals.csv
-  209  cut -f3 original_tweets.csv > filtered_originals.csv
-  210  head - 4 filtered_originals.csv 
-  211  head -4 filtered_originals.csv 
-  212  cd gnuplot-5.4.6/src/
-  213  vi plotter.plt 
-  214  ls
-  215  rm original_times.svg 
-  216  ./gnuplot plotter.plt
-  217  cd ..
-  218  ls
-  219  head -4 filtered_
-  220  head -4 filtered_originals.csv 
-  221  head -1 filtered_file.tsv 
-  222  wc filtered_file.tsv 
-  223  rm filtered_file.tsv 
-  224  cut -d' ' -f2 filtered_originals.csv 
-  225  cut -d' ' -f2 filtered_originals.csv > original_times
-  226  cut -d' ' -f2 filtered_originals.csv > original_times.csv
-  227  ls
-  228  rm original_times
-  229  ls
-  230  sed -i 's/:/./g' original_times.csv 
-  231  head -5 original_times.csv 
-  232  cut -d'.' -f1,2 original_times.csv 
-  233  cut -d'.' -f1,2 original_times.csv > original_time_vals.csv
-  234  uniq -c original_time_vals.csv 
-  235  uniq -c original_time_vals.csv | sort -nr
-  236  uniq -c original_time_vals.csv | sort -nr | head -2
-  237  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv 
-  238  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv  | grep 75
-  239  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
-  240  cat original_time_vals.csv 
-  241  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
-  242  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' input.csv > output.csv
-  243  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' original_time_vals.csv 
-  244  awk -F ',' '{ printf("%.2f\n", int(($1*60+7.5)/15)*15/60); }' original_time_vals.csv 
-  245  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' input.csv > output.csv
-  246  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
-  247  cat original_time_vals.csv 
-  248  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
-  249  cat original_time_vals.csv 
-  250  awk -F '.' '{ printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }' original_time_vals.csv 
-  251  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv awk: cmd. line:1: { printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }
-  252  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
-  253  cat original_time_vals.csv 
-  254  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
-  255  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr 
-  256  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr > plot_og.csv
-  257  cut -f2 plot_og.csv 
-  258  ls
-  259  cd gnuplot-5.4.6/
-  260  cd src/
-  261  ls
-  262  rm original_times.svg 
-  263  vi plotter.plt 
-  264  ./gnuplot plotter.plt 
-  265  set terminal
-  266  ./gnuplot 
-  267  vi plotter.plt 
+  169  cut -f2 -d$',' uniqTweetsASCII.csv > uniqueHashtags.csv
+  170  rm uniqueHashtagscsv 
+  171  ls
+  172  head uniqueHashtags.csv 
+  173  uniq -c uniqueHashtags.csv 
+  174  uniq -c uniqueHashtags.csv > uniqueHashtags.csv 
+  175  head -3 uniqueHashtags.csv 
+  176  wc uniqueHashtags.csv 
+  177  cut -f2 -d$',' uniqTweetsASCII.csv > uniqueHashtags.csv
+  178  uniq -c uniqueHashtags.csv > uniqueHashtags2.csv 
+  179  head -3 uniqueHashtags2.csv 
+  180  wc -l uniqueHashtags.csv 
+  181  wc -l uniqueHashtags.csv >> a1.txt 
+  182  vi a1.txt 
+  183  sort uniqueHashtags.csv 
+  184  uniq -c sortedHashtags.cvs > uniqueHashtags2.csv 
+  185  wc -l uniqueHashtags.csv 
+  186  cat uniqueHashtags
+  187  cat uniqueHashtags.csv 
+  188  ls
+  189  head -4 uniqueHashtags2.csv
+  190  wc -l uniqueHashtags2.csv
+  191  wc -l uniqueHashtags2.csv >> a1.txt
+  192  vi a1.txt 
+  193  rm uniqueUsers.csv 
+  194  ls
+  195  cut -f1 -d$',' tweetsASCII.csv > uniqUser.csv
+  196  ls
+  197  sort uniqUser.csv > sortedUsers.csv
+  198  head -10 sortedUsers.csv 
+  199  uniq -c sortedUsers.cvs > users.csv 
+  200  uniq -c sortedUsers.csv > users.csv 
+  201  ls
+  202  wc -l users.csv 
+  203  wc -l users.csv >> a1.txt
+  204  vi a1.txt 
+  205  head -1 tweetsASCII.csv 
+  206  cut -f4 -d$',' tweetsASCII.csv | sort | uniq -c > tweets.csv
+  207  head -5 tweets.csv 
+  208  wc -l tweets.csv >> a1.txt 
+  209  vi a1.txt 
+  210  history > cmd.logs
+  211  vi cmd.logs
+  212  git add cmd.logs
+  213  git add a1.txt 
+  214  git status
+  215  git commit -m "a1 assignment."
+  216  git push https://github.com/pfarrow75/cs131.git
+  217  exit
+  218  history
+  219  pwd
+  220  ls
+  221  head -1 reTweets.tsv 
+  222  head -10 originalTweets.tsv 
+  223  grep replied_to originalTweets.tsv 
+  224  head -1 originalTweets.tsv 
+  225  grep replied_to originalTweets.tsv | sort | uniq -c | sort -n | head -10
+  226  grep replied_to originalTweets.tsv | sort
+  227  grep replied_to originalTweets.tsv | cut -d&"\t" -f1 | sort | uniq -c | sort -n | head -10
+  228  grep replied_to originalTweets.tsv | cut -f1 -d&'\t' | sort | uniq -c | sort -n | head -10
+  229  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c | sort -n | head -10
+  230  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' 
+  231  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort 
+  232  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c 
+  233  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | uniq -c | sort -rn | head -10
+  234  cat originalTweets.tsv 
+  235  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | head -10 
+  236  grep replied_to originalTweets.tsv | cut -f1 -d$'\t' | sort | less
+  237  grep replied_to originalTweets.tsv 
+  238  head -1 originalTweets.tsv 
+  239  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -n
+  240  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+  241  ls
+  242  cat a2.txt
+  243  vi a2.txt 
+  244  grep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txtgrep replied_to originalTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+  245  vi a2.txt 
+  246  ls
+  247  rm a2.txtgrep 
+  248  ls
+  249  grep replied_to originalTweets.tsv
+  250  grep replied_to originalTweets.tsv | cut -f5 -d$'\t'
+  251  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' 
+  252  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+  253  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'=' >> IdsRepliedTo.txt
+  254  ls
+  255  for i in $(ls); do echo i ; ; 
+  256  for i in $(ls); do echo i ; done
+  257  for i in $(ii); do echo $i ; done
+  258  for i in $(for i in $(ii); do echo $i ; done); do echo $i ; done
+  259  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+  260  grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='
+  261  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do echo $i ; done
+  262  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i originalTweets.tsv ; done
+  263  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,f2 -d$'\t' | grep $i originalTweets.tsv ; done
+  264  cut -f1,f2 -d$'\t' originalTweets.tsv >> grepAuthor.txt
+  265  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,2 -d$'\t' | grep $i  ; done
+  266  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do cut -f1,2 -d$'\t' originalTweets.tsv | grep $i  ; done
+  267  for i in $(IdsRepliedTo.txt); do cut -f1,2 -d$'\t' originalTweets.tsv | grep $i >> test.txt  ; done
   268  ls
-  269  ./gnuplot plotter.plt 
-  270  vi plotter.plt 
-  271  ./gnuplot plotter.plt 
-  272  cd ..
-  273  ls
-  274  cd gnuplot-5.4.6/
-  275  cd src/
-  276  ls
-  277  rm originals.svg 
-  278  vi plotter.plt 
-  279  ./gnuplot plotter.plt 
-  280  ls
-  281  git add originals.svg 
-  282  git status
-  283  git commit -m "tried new way hoping for best" 
-  284  git push 
-  285  git push https://github.com/pfarrow75/cs131
-  286  cd ..
-  287  ls
-  288  sort -k2 plot_og.csv 
-  289  sort -k2 plot_og.csv  >> sorted_plot.csv
-  290  ls
-  291  cd gnuplot-5.4.6/src/
-  292  vi plotter.plt 
-  293  cd .. 
-  294  cd ..
-  295  ls
-  296  cd gnuplot-5.4.6/src/
-  297  vi plotter.plt 
-  298  ./gnuplot plotter.plt 
-  299  vi plotter.plt 
-  300  ./gnuplot plotter.plt 
-  301  rm originals.svg 
-  302  ./gnuplot plotter.plt 
-  303  ls
-  304  git add originals.svg 
-  305  git commit -m "clean up on it" 
-  306  git push https://github.com/pfarrow75/cs131
-  307  vi plotter.plt 
-  308  ls
-  309  vi plotter.plt 
-  310  ls -la
-  311  rm .plotter.plt.swp 
-  312  vi plotter.plt 
-  313  rm originals.svg 
-  314  ./gnuplot plotter.plt 
-  315  vi plotter.plt 
-  316  ./gnuplot plotter.plt 
-  317  ls
-  318  git add originals.svg
-  319  git commit -m "adding spacing" 
-  320  git status
-  321  ls
-  322  git add originals.svg 
-  323  git status
-  324  git push https://github.com/pfarrow75/cs131
-  325  git add originals.svg
-  326  git commit -m "adding space to graph"
-  327  git push
-  328  vi plotter.plt 
-  329  git add originals2.svg
-  330  ls
-  331  ./gnuplot plotter.plt 
-  332  git add originals2.svg
-  333  git commit -m "adding space" 
-  334  git push https://github.com/pfarrow75/cs131
-  335  git pull
-  336  git pull https://github.com/pfarrow75/cs131
-  337  git status
-  338  ls
-  339  git add originals2.svg 
-  340  git commit -m "please look better now" 
-  341  mv originals2.svg ../../originalGraph.svg
-  342  cd ..
-  343  ls
-  344  git add originalGraph.svg 
-  345  git status
-  346  git commit -m "please work for all things good"
-  347  git push https://github.com/pfarrow75/cs131
-  348  cd gnuplot-5.4.6/src/
-  349  vi plotter.plt 
-  350  ./gnuplot plotter.plt 
-  351  ls
-  352  git add originals3.svg 
-  353  git commit -m "another attempt to make graph more readable"
-  354  git push https://github.com/pfarrow75/cs131
-  355  cd ..
-  356  history > cmd.logs
+  269  cat IdsRepliedTo.txt 
+  270  sort IdsRepliedTo.txt 
+  271  uniq -c IdsRepliedTo.txt 
+  272  ls
+  273  head -4 IdsRepliedTo.txt 
+  274  cat IdsRepliedTo.txt 
+  275  ls
+  276  cat grepAuthor.txt 
+  277  wc grepAuthor.txt 
+  278  cut -f1,2 -d'\t' originalTweets.tsv >> grepAuthor.txt 
+  279  cut -f1,2 -d$'\t' originalTweets.tsv >> grepAuthor.txt 
+  280  cat grepAuthor.txt 
+  281  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do echo $i  ; done
+  282  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt  ; done
+  283  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt > tRt.txt ; done
+  284  ls
+  285  wc grepAuthor.txt 
+  286  wc tRt.txt 
+  287  cat tRt.txt
+  288  rm tRt.txt 
+  289  for i in $(grep replied_to originalTweets.tsv | cut -f5 -d$'\t' | cut -f2 -d$' ' | cut -f2 -d'='); do grep $i grepAuthor.txt >> tRt.txt ; done
+  290  wc -l grepAuthor.txt 
+  291  wc -l tRt.txt 
+  292  cut -f2 -d$'\t' tRt.txt | sort | uniq -c | sort -rn | head -10
+  293  cut -f2 -d$'\t' tRt.txt | sort | uniq -c | sort -rn | head -10 >> a2.txt 
+  294  ls
+  295  vi a2.txt 
+  296  3.)
+  297  history
+  298  clear
+  299  ls
+  300  cat reTweets.tsv 
+  301  grep retweeted reTweets.tsv | cut -f2, -d$'\t' | sort | uniq -c | sort -rn | head -10
+  302  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10
+  303  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+  304  vi a2.txt 
+  305  head -1 reTweets.tsv 
+  306  cut -f4 -d$'\t' reTweets.tsv 
+  307  cut -f4 -d$'\t' reTweets.tsv | sort
+  308  cut -f4 -d$'\t' reTweets.tsv | sort | uniq -c | sort -rn | head -30
+  309  cut -f4 -d$'\t' reTweets.tsv | sort | uniq -c | sort -rn | head -30 >> a2.txt
+  310  a2.txt
+  311  vi a2.txt 
+  312  grep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txtgrep retweeted reTweets.tsv | cut -f2 -d$'\t' | sort | uniq -c | sort -rn | head -10 >> a2.txt
+  313  vi a2.txt 
+  314  ls
+  315  rm a2.txtgrep 
+  316  ls
+  317  rm grepAuthor.txt 
+  318  rm IdsRepliedTo.txt 
+  319  git status
+  320  git add a2.txt 
+  321  history >> cmd.logs
+  322  vi cmd.logs 
+  323  git add cmd.logs 
+  324  git s
+  325  git status 
+  326  git commit -m "a2 submission"
+  327  git push origin main
+  328  git push
+  329   git push https://github.com/pfarrow75/cs131.git
+  330  git push --help
+  331  git status
+  332  ls
+  333  git add a2.txt
+  334  git status
+  335  pwd
+  336  cd ..
+  337  ls
+  338  git status
+  339  cd a2
+  340  ls
+  341  rm originalTweets.tsv 
+  342  rm reTweets.tsv 
+  343  rm tRt.txt 
+  344  rm test.txt 
+  345  ls
+  346  cd ..
+  347  cd a2
+  348  git add .
+  349  git status
+  350  pwd
+  351  git add .
+  352  git status
+  353  git push https://github.com/pfarrow75/cs131.git
+  354  cd ..
+  355  ls
+  356  git pull https://github.com/pfarrow75/cs131.git
+  357  ls
+  358  git push https://github.com/pfarrow75/cs131.git
+  359  history
+  360  1
+  361  ls
+  362  head -5 tweets.tsv 
+  363  grep replied_to tweets.tsv | cut -f2,6 -d$'\t' >> task1.txt
+  364  vi task1.txt 
+  365  cat task1.txt 
+  366  wc -l task1.txt 
+  367  head -1 tweets.tsv 
+  368  head -2 tweets.tsv 
+  369  grep replied_to tweets.tsv 
+  370  head -1 tweets.tsv 
+  371  awk '{count[$1]++; if (count[$1] > 3) print}' task2.txt
+  372  awk '{count[$1]++; if (count[$1] > 3) print}' task1.txt >> task2.txt
+  373  ls
+  374  grep replied_to tweets.tsv | cut -f2,6 -d$'\t' >> check.txt
+  375  sort check.txt | uniq -c >> 
+  376  rm check.txt 
+  377  ls
+  378  grep replied_to tweets.tsv | cut -f2 -d$'\t' | sort | uniq -c >> check.txt
+  379  head - 10 check.txt 
+  380  head -10 check.txt 
+  381  grep 1155192156 task2.txt 
+  382  grep 118166719 task2.txt 
+  383  gnuplot
+  384  find / -name \*gnuplot\* 
+  385  find / -name \*gnuplot\* | grep -v denied
+  386  find / -name \*gnuplot\* 2>&1 | grep -v denied
+  387  echo $SHELL
+  388  ls
+  389  vi ~/.bashrc
+  390  which gnuplot
+  391  apt-get update
+  392  apt-get install gnuplot
+  393  id
+  394  guid
+  395  wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz
+  396  gzip -d gnuplot-5.4.6.tar.gz
+  397  tar xvf gnuplot-5.4.6.tar
+  398  cd gnuplot-5.4.6/
+  399  ./configure --disable-dependency-tracking
+  400  make
+  401  make check
+  402  ls
+  403  pwd
+  404   cd src
+  405  ls
+  406  ./gnuplot
+  407  ls
+  408  cd ..
+  409  ls
+  410  cd ..
+  411  ls
+  412  head -5 task2.txt
+  413  cut -f2 -d$'\t' task2.txt >> replied_to_users.txt
+  414  head -3 replied_to_users.txt 
+  415  sort replied_to_users.txt 
+  416  sort replied_to_users.txt | uniq -c >> user_count.txt
+  417  head -6 user_count.txt 
+  418  sort -n user_count.txt 
+  419  sort -nr user_count.txt 
+  420  gnuplot
+  421  cd gnuplot-5.4.6/
+  422  ls
+  423  cd src/
+  424  ls
+  425  ./gnuplot 
+  426  ls
+  427  cat h1.svg
+  428  bat 
+  429  catigm
+  430  catimg
+  431  ls
+  432  ./gnuplot 
+  433  rm h1.svg 
+  434  ./gnuplot 
+  435  cd ..
+  436  ls
+  437  git add task1.txt
+  438  git status
+  439  git add task2.txt
+  440  git add gnuplot-5.4.6/src/h1.svg
+  441  git status
+  442  git add gnuplot-5.4.6/src/h4.svg
+  443  history > cmds.logs
+  444  ls
+  445  git add cmds.logs 
+  446  git status
+  447  git commit -m
+  448  git commit -m "checking svgs"
+  449  git push 
+  450  git push origin/main
+  451  git status
+  452  git push 
+  453  git@github.com: Permission denied (publickey).
+  454  fatal: Could not read from remote repository.
+  455  Please make sure you have the correct access rights
+  456  and the repository exists.
+  457  git push https://github.com/pfarrow75/cs131.git
+  458  cd gnuplot-5.4.6/
+  459  ls
+  460  cd src/
+  461  ls
+  462  rm h1.svg 
+  463  ./gnuplot 
+  464  git add h1.svg 
+  465  git status
+  466  git commit -m "fixing wrong input on h1.svg"
+  467  git push https://github.com/pfarrow75/cs131.git
+  468  cd .. 
+  469  cd ..
+  470  cat user_count.txt 
+  471  sort -nr user_count.txt 
+  472  sort -nr user_count.txt | head -10
+  473  wc -l user_count.txt 
+  474  cd gnuplot-5.4.6/
+  475  cd s
+  476  cd src/
+  477  ./gnuplot 
+  478  ls
+  479  git add h2.svg 
+  480  git commit -m "trying h1 but didnt want to keep deleting so i could see the changes
+  481  "
+  482  git push https://github.com/pfarrow75/cs131.git
+  483  ./gnuplot 
+  484  git add h2.svg 
+  485  git commit -m "retrying again" 
+  486  git push https://github.com/pfarrow75/cs131.git
+  487  ./gnuplot 
+  488  ls
+  489  git add h5.svg 
+  490  git commit -m "fixing h4.svg" 
+  491  git push https://github.com/pfarrow75/cs131.git
+  492  ./gnuplot 
+  493  ls
+  494  git add user_counts.svg 
+  495  git commit -m "trying to figure out getting 4 in 1 bin"
+  496  git push https://github.com/pfarrow75/cs131.git
+  497  ./gnuplot 
+  498  ls
+  499  git add user_message_count.svg 
+  500  git add user_counts.svg 
+  501  git commit -m "please anything work"
+  502  git push https://github.com/pfarrow75/cs131.git
+  503  ls
+  504  cd cs131
+  505  ls
+  506  cd a3
+  507  ls
+  508  history
+  509  1
+  510  ls
+  511  mkdir test
+  512  mkdir train
+  513  ls
+  514  vi mysplit.sh
+  515  history
+  516  vi mysplit.sh 
+  517  ls
+  518  head -2 winequality-red.csv 
+  519  wc -l winequality-red.csv 
+  520  ls -la
+  521  chmod +x mysplit.sh 
+  522  ls -la
+  523  ./mysplit.sh winequality-red.csv 
+  524  ls
+  525  ls /test
+  526  ls ./test
+  527  vi mysplit.sh 
+  528  ./mysplit.sh winequality-red.csv 
+  529  ls
+  530  cd test/
+  531  ls
+  532  rm *
+  533  ls
+  534  cd ..
+  535  cd train/
+  536  ls
+  537  rm *
+  538  cd ..
+  539  ./mysplit.sh winequality-red.csv 
+  540  cd test/
+  541  ls
+  542  rm *
+  543  cd ..
+  544  rm /train/*
+  545  rm train/*
+  546  ls train
+  547  ls
+  548  cd train/
+  549  ls
+  550  cd ..
+  551  vi mysplit.sh 
+  552  ./mysplit.sh winequality-red.csv 
+  553  vi mysplit.sh 
+  554  ./mysplit.sh winequality-red.csv 
+  555  ls
+  556  cd test/
+  557  ls
+  558  wc data.csv 
+  559  wc -l data.csv 
+  560  cd ..
+  561  cd train/
+  562  wc -l data.csv 
+  563  cd ..
+  564  vi mysplit.sh 
+  565  ./mysplit.sh winequality-red.csv 
+  566  vi mysplit.sh 
+  567  history
+  568  mkdir a4
+  569  cd a4
+  570  wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+  571  ls
+  572  mkdir test
+  573  mkdir train
+  574  ls
+  575  vi mysplit.sh
+  576  ls -la
+  577  chmod +x mysplit.sh 
+  578  ls -la
+  579  ./mysplit.sh winequality-red.csv 
+  580  cd train/
+  581  ls
+  582  wc data.csv 
+  583  wc -l
+  584  wc -l data.csv 
+  585  cd ..
+  586  wc -l /train/data.csv
+  587  wc -l ./train/data.csv
+  588  wc -l ./test/data.csv
+  589  wc -l winequality-red.csv 
+  590  ct ./test/data.csv 
+  591  cat ./test/data.csv 
+  592  cd test/
+  593  ls
+  594  cd ..
+  595  vi mysplit.sh 
+  596  ./mysplit.sh winequality-red.csv 
+  597  vi mysplit.sh 
+  598  cd train/
+  599  ls
+  600  rm data.csv 
+  601  ls
+  602  cd ..
+  603  ./mysplit.sh winequality-red.csv 
+  604  ls
+  605  wc -l x00
+  606  wc -l x01
+  607  vi mysplit.sh 
+  608  cd train/
+  609  ls
+  610  rm data.csv 
+  611  cd ..
+  612  ./mysplit.sh winequality-red.csv 
+  613  cd train/
+  614  ls
+  615  wc -l data.csv 
+  616  cd ..
+  617  vi mysplit.sh 
+  618  cd test/
+  619  ls
+  620  rm data.csv 
+  621  cd ..
+  622  ./mysplit.sh winequality-red.csv 
+  623  cd test/
+  624  wc -l data.csv 
+  625  rm data.csv 
+  626  cd ..
+  627  vi mysplit.sh 
+  628  ./mysplit.sh winequality-red.csv 
+  629  cd t
+  630  cd test/
+  631  wc -l data.csv 
+  632  rm data.csv 
+  633  cd ..
+  634  cd train/
+  635  rm data.csv 
+  636  cd ..
+  637  ls
+  638  rm x0*
+  639  ls
+  640  vi mysplit.sh 
+  641  ./mysplit.sh winequality-red.csv 
+  642  ls
+  643  cd train/
+  644  head -5 data.csv 
+  645  wc -l data.csv 
+  646  cd ..
+  647  cd test/
+  648  head -5 data.csv 
+  649  cd ..
+  650  vi mysplit.sh 
+  651  ls
+  652  cd test/
+  653  ls
+  654  rm data.csv 
+  655  cd ..
+  656  cd train/
+  657  ls
+  658  rm data.csv 
+  659  cd ..
+  660  ./mysplit.sh winequality-red.csv 
+  661  wc -l ./train/data.csv 
+  662  wc -l ./test/data.csv 
+  663  head -2 ./test/data.csv 
+  664  head -2 ./train/data.csv 
+  665  vi mysplit.sh 
+  666  git status
+  667  git add test
+  668  git add train
+  669  git add mysplit.sh 
+  670  git status
+  671  git commit -m "submitting assignment 4"
+  672  git push 
+  673  git push https://github.com/pfarrow75/cs131
+  674  git pull
+  675  git pull https://github.com/pfarrow75/cs131.git
+  676  ls
+  677  git status
+  678  git push https://github.com/pfarrow75/cs131.git
+  679  history
+  680  mkdir a5
+  681  cd a5
+  682  ls
+  683  wget https://cseweb.ucsd.edu/~jmcauley/datasets.html#steam_data
+  684  ls
+  685  rm datasets.html 
+  686  wget https://cseweb.ucsd.edu/~wckang/steam_games.json.gz
+  687  ls
+  688  gzip -d steam_games.json.gz 
+  689  ls
+  690  head -20 steam_games.json 
+  691  head -1 steam_games.json 
+  692  clear
+  693  head -2 steam_games.json 
+  694  dasel
+  695  grep steam_games.json ","
+  696  grep ","  steam_games.json
+  697  clear
+  698  jsonv
+  699  python --version
+  700  jq -r '.data[] | @tsv 
+  701  jq
+  702  cat steam_games.json | jq -r '.data[] | @tsv 
+  703  cat steam_games.json | jq -r '.data[] | @tsv '
+  704  jq -r '(.[0] | keys_unsorted) as $keys | $keys, map([.[$keys[]]])[] | @tsv' steam_games.json > data.tsv
+  705  head -1 steam_games.json 
+  706  parse error: Invalid numeric literal at line 1, column 14
+  707  wc -l steam_games.json 
+  708  head -2 steam_games.json 
+  709  head -2 steam_games.json | jq '.'
+  710  head -2 steam_games.json | jq '[]'
+  711  head -1 steam_games.json 
+  712  {u'publisher': u'Kotoshiro', u'genres': [u'Action', u'Casual', u'Indie', u'Simulation', u'Strategy'], u'app_name': u'Lost Summoner Kitty', u'title': u'Lost Summoner Kitty', u'url': u'http://store.steampowered.com/app/761140/Lost_Summoner_Kitty/', u'release_date': u'2018-01-04', u'tags': [u'Strategy', u'Action', u'Indie', u'Casual', u'Simulation'], u'discount_price': 4.49, u'reviews_url': u'http://steamcommunity.com/app/761140/reviews/?browsefilter=mostrecent&p=1', u'specs': [u'Single-player'], u'price': 4.99, u'early_access': False, u'id': u'761140', u'developer': u'Kotoshiro'}
+  713  python --version
+  714  python3 --version
+  715  python3
+  716  ls
+  717  python3
+  718  vi foo.py
+  719  python3 foo.py 
+  720  head -1 steam_games.json >> test.dict
+  721  vi test.dict 
+  722  vi foo.py 
+  723  python3 foo.py 
+  724  vi foo.py 
+  725  python3 foo.py 
+  726  cat output.tsv 
+  727  vi foo.py 
+  728  python3
+  729  cat test.dict 
+  730  cat steam_games.json > input.txt
+  731  vi foo.py 
+  732  python3 foo.py 
+  733  ls
+  734  cat output.tsv 
+  735  rm output.tsv 
+  736  python3 foo.py 
+  737  cat output.tsv 
+  738  rm output.tsv 
+  739  vi foo.py 
+  740  ls
+  741  python3 foo.py 
+  742  head -2 output.tsv 
+  743  history
+  744  head -4 tweets.csv 
+  745  cut -f3,7 tweets.csv 
+  746  cut -f7 tweets.csv 
+  747  cut -f8 tweets.csv 
+  748  grep 'replied' tweets.csv 
+  749  cut -f5 tweets.csv 
+  750  vi splitter.sh
+  751  ls
+  752  head -1 tweets.csv 
+  753  id      author  date    hashtags        referenced      in_reply_to_user_id     public_metrics  text_nolf
+  754  grep 'type=retweeted' > retweeted_tweets.csv
+  755  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
+  756  grep 'type=replied_to' tweets.csv > retweeted_tweets.csv
+  757  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" file.tsv > filtered_file.tsv
+  758  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
+  759  grep type original_tweets.tsv 
+  760  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
+  761  grep type original_tweets.tsv 
+  762  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
+  763  wc -l retweeted_tweets.csv 
+  764  grep 'type=replied_to' tweets.csv > replied_tweets.csv
+  765  wc -l replied_tweets.csv 
+  766  wc -l tweets.csv 
+  767  wc -l original_tweets.tsv 
+  768  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsvrm original_tweets.tsv 
+  769  ls
+  770  rm original_tweets.tsv
+  771  rm original_tweets.tsvrm 
+  772  grep -v 'type=replied' tweets.csv | grep -v 'type=retweeted' > original_tweets.csv
+  773  wc -l original_tweets.csv 
+  774  vi plotter.plt
+  775  ls
+  776  gnuplot
+  777  gnuplot --version
+  778  apt-get install gnuplot
+  779  pip install gnuplot
+  780  cd ..
+  781  cd a3
+  782  gnuplot --version
+  783  cd ..
+  784  cd a5
+  785  ls
+  786  wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz
+  787  gzip -d gnuplot-5.4.6.tar.gz
+  788  tar xvf gnuplot-5.4.6.tar
+  789  cd gnuplot-5.4.6/
+  790  ./configure --disable-dependency-tracking
+  791  make
+  792  make check
+  793  ls
+  794  cd src
+  795  ls
+  796  pwd
+  797  vi plotter.plt
+  798  find plotter.plt
+  799  chmod +x plotter.plt 
+  800  ls
+  801  gnuplot plotter.plt 
+  802  ./gnuplot plotter.plt
+  803  cd ..
+  804  l
+  805  cd ..
+  806  ls
+  807  cd gnuplot-5.4.6/
+  808  cd src/
+  809  vi plotter.plt 
+  810  ./gnuplot plotter.plt
+  811  "plotter.plt" line 7: Both parameters to strptime must be strings
+  812  vi plotter.plt 
+  813  ./gnuplot plotter.plt
+  814  "plotter.plt" line 7: f_sprintf: attempt to print numeric value with string format
+  815  vi plotter.plt 
+  816  ./gnuplot plotter.plt
+  817  cd ..
+  818  head -2 original_tweets.csv 
+  819  cd gnuplot-5.4.6/
+  820  cd src/
+  821  vi plotter.plt 
+  822  ./gnuplot plotter.plt
+  823  vi plotter.plt 
+  824  ./gnuplot plotter.plt
+  825  vi plotter.plt 
+  826  ./gnuplot plotter.plt
+  827  ls
+  828  rm original_times.svg 
+  829  vi plotter.plt 
+  830  ./gnuplot plotter.plt
+  831  git status
+  832  git add original_times.svg 
+  833  cd ..
+  834  git commit -m "checking svg errors"
+  835  git push
+  836  git status
+  837  git push
+  838  git push https://github.com/pfarrow75/cs131
+  839  head -4 original_tweets.csv 
+  840  cut -f3 > filtered_originals.csv
+  841  cut -f3 original_tweets.csv > filtered_originals.csv
+  842  head - 4 filtered_originals.csv 
+  843  head -4 filtered_originals.csv 
+  844  cd gnuplot-5.4.6/src/
+  845  vi plotter.plt 
+  846  ls
+  847  rm original_times.svg 
+  848  ./gnuplot plotter.plt
+  849  cd ..
+  850  ls
+  851  head -4 filtered_
+  852  head -4 filtered_originals.csv 
+  853  head -1 filtered_file.tsv 
+  854  wc filtered_file.tsv 
+  855  rm filtered_file.tsv 
+  856  cut -d' ' -f2 filtered_originals.csv 
+  857  cut -d' ' -f2 filtered_originals.csv > original_times
+  858  cut -d' ' -f2 filtered_originals.csv > original_times.csv
+  859  ls
+  860  rm original_times
+  861  ls
+  862  sed -i 's/:/./g' original_times.csv 
+  863  head -5 original_times.csv 
+  864  cut -d'.' -f1,2 original_times.csv 
+  865  cut -d'.' -f1,2 original_times.csv > original_time_vals.csv
+  866  uniq -c original_time_vals.csv 
+  867  uniq -c original_time_vals.csv | sort -nr
+  868  uniq -c original_time_vals.csv | sort -nr | head -2
+  869  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv 
+  870  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv  | grep 75
+  871  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
+  872  cat original_time_vals.csv 
+  873  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
+  874  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' input.csv > output.csv
+  875  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' original_time_vals.csv 
+  876  awk -F ',' '{ printf("%.2f\n", int(($1*60+7.5)/15)*15/60); }' original_time_vals.csv 
+  877  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' input.csv > output.csv
+  878  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
+  879  cat original_time_vals.csv 
+  880  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
+  881  cat original_time_vals.csv 
+  882  awk -F '.' '{ printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }' original_time_vals.csv 
+  883  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv awk: cmd. line:1: { printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }
+  884  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
+  885  cat original_time_vals.csv 
+  886  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
+  887  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr 
+  888  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr > plot_og.csv
+  889  cut -f2 plot_og.csv 
+  890  ls
+  891  cd gnuplot-5.4.6/
+  892  cd src/
+  893  ls
+  894  rm original_times.svg 
+  895  vi plotter.plt 
+  896  ./gnuplot plotter.plt 
+  897  set terminal
+  898  ./gnuplot 
+  899  vi plotter.plt 
+  900  ls
+  901  ./gnuplot plotter.plt 
+  902  vi plotter.plt 
+  903  ./gnuplot plotter.plt 
+  904  cd ..
+  905  ls
+  906  cd gnuplot-5.4.6/
+  907  cd src/
+  908  ls
+  909  rm originals.svg 
+  910  vi plotter.plt 
+  911  ./gnuplot plotter.plt 
+  912  ls
+  913  git add originals.svg 
+  914  git status
+  915  git commit -m "tried new way hoping for best" 
+  916  git push 
+  917  git push https://github.com/pfarrow75/cs131
+  918  cd ..
+  919  ls
+  920  sort -k2 plot_og.csv 
+  921  sort -k2 plot_og.csv  >> sorted_plot.csv
+  922  ls
+  923  cd gnuplot-5.4.6/src/
+  924  vi plotter.plt 
+  925  cd .. 
+  926  cd ..
+  927  ls
+  928  cd gnuplot-5.4.6/src/
+  929  vi plotter.plt 
+  930  ./gnuplot plotter.plt 
+  931  vi plotter.plt 
+  932  ./gnuplot plotter.plt 
+  933  rm originals.svg 
+  934  ./gnuplot plotter.plt 
+  935  ls
+  936  git add originals.svg 
+  937  git commit -m "clean up on it" 
+  938  git push https://github.com/pfarrow75/cs131
+  939  vi plotter.plt 
+  940  ls
+  941  vi plotter.plt 
+  942  ls -la
+  943  rm .plotter.plt.swp 
+  944  vi plotter.plt 
+  945  rm originals.svg 
+  946  ./gnuplot plotter.plt 
+  947  vi plotter.plt 
+  948  ./gnuplot plotter.plt 
+  949  ls
+  950  git add originals.svg
+  951  git commit -m "adding spacing" 
+  952  git status
+  953  ls
+  954  git add originals.svg 
+  955  git status
+  956  git push https://github.com/pfarrow75/cs131
+  957  git add originals.svg
+  958  git commit -m "adding space to graph"
+  959  git push
+  960  vi plotter.plt 
+  961  git add originals2.svg
+  962  ls
+  963  ./gnuplot plotter.plt 
+  964  git add originals2.svg
+  965  git commit -m "adding space" 
+  966  git push https://github.com/pfarrow75/cs131
+  967  git pull
+  968  git pull https://github.com/pfarrow75/cs131
+  969  git status
+  970  ls
+  971  git add originals2.svg 
+  972  git commit -m "please look better now" 
+  973  mv originals2.svg ../../originalGraph.svg
+  974  cd ..
+  975  ls
+  976  git add originalGraph.svg 
+  977  git status
+  978  git commit -m "please work for all things good"
+  979  git push https://github.com/pfarrow75/cs131
+  980  cd gnuplot-5.4.6/src/
+  981  vi plotter.plt 
+  982  ./gnuplot plotter.plt 
+  983  ls
+  984  git add originals3.svg 
+  985  git commit -m "another attempt to make graph more readable"
+  986  git push https://github.com/pfarrow75/cs131
+  987  cd ..
+  988  history > cmd.logs
+  989  git add cmd.logs 
+  990  ls
+  991  cd gnuplot-5.4.6/
+  992  cd src/
+  993  git add plotter.plt 
+  994  ls
+  995  git status
+  996  git commit -m "sleeping for the night" will try to finish after work i guess" 
+  997  git commit -m "sleeping for the night will try to finish after work i guess" 
+  998  git push https://github.com/pfarrow75/cs131
+  999  cd a5
+ 1000  ls
+ 1001  cd cs131/a5
+ 1002  ls
+ 1003  head -2 retweeted_tweets.csv 
+ 1004  cut -f3 retweeted_tweets.csv 
+ 1005  cut -f3 retweeted_tweets.csv | cut -d' ' -f2 | sed -i 's/:/./g
+ 1006  cut -f3 retweeted_tweets.csv | cut -d' ' -f2 | sed -i 's/:/./g' 
+ 1007  cut -f3 retweeted_tweets.csv | cut -d' ' -f2 > retweeted_times.csv
+ 1008  head -5 retweeted_times.csv 
+ 1009  sed -i 's/:/./g' retweeted_times.csv 
+ 1010  head -5 retweeted_times.csv 
+ 1011  cut -d'.' -f1,2 retweeted_times.csv > rt_tv.csv
+ 1012  ls
+ 1013  head -5 rt_tv.csv 
+ 1014  sort rt_tv.csv 
+ 1015  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' rt_tv.csv | sort | uniq -c | sort -nr 
+ 1016  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' rt_tv.csv | sort | uniq -c | sort -k2 
+ 1017  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' rt_tv.csv | sort | uniq -c | sort -k2 > rt_sorted.csv
+ 1018  cd gnuplot-5.4.6/src/
+ 1019  vi plotter.plt 
+ 1020  cd ..
+ 1021  ls
+ 1022  cd gnuplot-5.4.6/src/
+ 1023  vi plotter.plt 
+ 1024  ./gnuplot plotter.plt 
+ 1025  git add retweeted_times.svg 
+ 1026  git commit -m "checking retweeted"
+ 1027  git push https://github.com/pfarrow75/cs131
+ 1028  cut -f3 replied_tweets.csv 
+ 1029  cd ..
+ 1030  cut -f3 replied_tweets.csv 
+ 1031  cut -f3 replied_tweets.csv | cut -d' ' -f2 
+ 1032  cut -f3 replied_tweets.csv | cut -d' ' -f2 > replied_times.csv
+ 1033  sed -i 's/:/./g' replied_times.csv 
+ 1034  head replied_times.csv 
+ 1035  cut -d'.' -f1,2 replied_times.csv > rp_val.csv
+ 1036  head -5 rp_val.csv 
+ 1037  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' rp_val.csv | sort | uniq -c | sort -k2
+ 1038  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' rp_val.csv | sort | uniq -c | sort -k2 > rp_plot.csv
+ 1039  cd gnuplot-5.4.6/src/
+ 1040  vi plotter.plt 
+ 1041  ./gnuplot plotter.plt 
+ 1042  ls
+ 1043  git add replied_times.svg 
+ 1044  git commit -m "replied times added for mini presentation"
+ 1045  git push https://github.com/pfarrow75/cs131
+ 1046  cd ..
+ 1047  rm cmd.logs 
+ 1048  ls
+ 1049  history >> cmd.logs

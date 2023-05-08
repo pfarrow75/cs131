@@ -1,66 +1,3 @@
-   50  ls
-   51  cd a1/
-   52  ls
-   53  rm a1.txtcp
-   54  ls
-   55  vi a1.txt
-   56  ls -l temp
-   57  cd temp
-   58  ls temp
-   59  ls -la temp
-   60  vi a1.txt
-   61  echo hello
-   62  echo hello temp/hello.txt
-   63  echo hello > temp/hello.txt
-   64  vi a1.txt
-   65  mkdir temp2
-   66  ls
-   67  mv temp2 temp3
-   68  ls
-   69  cd temp3
-   70  ls
-   71  cd ..
-   72  ls
-   73  vi a1.txt 
-   74  ls >> a1.txt
-   75  ls
-   76  vi a1.txt 
-   77  cp temp3 temp2
-   78  ls
-   79  cp temp3 temp2 >> a1.txt 
-   80  vi a1.txt 
-   81  cp -r temp3 temp2 >> a1.txt 
-   82  ;s
-   83  ls
-   84  ls >> a1.txt
-   85  vi a1.txt 
-   86  ls /proc/cpuinfo
-   87  ls -la /proc/cpuinfo
-   88  cat /proc/cpuinfo
-   89  grep "cpu"  /proc/cpuinfo
-   90  ls /proc 
-   91  cat /proc/meminfo
-   92  ls /proc | grep cpu
-   93  ls /proc | grep cpu >> a1.txt
-   94  ls /proc | grep mem >> a1.txt
-   95  vi a1
-   96  vi
-   97  ls
-   98  vi a1.txt 
-   99  head -10 /proc/meminfo
-  100  head -1 /proc/meminfo >> a1.txt
-  101  vi a1.txt 
-  102  cat /proc/cpuinfo
-  103  cat /proc/cpuinfo | grep architecture
-  104  vi a1.txt 
-  105  head -4 /proc/cpuinfo >> a1.txt 
-  106  vi a1.txt 
-  107  ls
-  108  cp /home/test/A1/downloaded_hashtags_extend.csv tweets.csv
-  109  ls
-  110  head -5 tweets.csv 
-  111  cat tweets.csv 
-  112  ls -la 
   113  stat -c%s tweets.csv
   114  stat -c%s tweets.csv >> a1.txt
   115  vi a1.txt 
@@ -998,3 +935,66 @@
  1047  rm cmd.logs 
  1048  ls
  1049  history >> cmd.logs
+ 1050  git add cmd.logs 
+ 1051  git commit -m "updated logs" 
+ 1052  git push https://github.com/pfarrow75/cs131
+ 1053  ls
+ 1054  cat original_time_vals.csv 
+ 1055  ls
+ 1056  cat plot_og.csv 
+ 1057  cat sorted_plot.csv 
+ 1058  cd ./gnuplot-5.4.6/
+ 1059  cd src/
+ 1060  l
+ 1061  ls
+ 1062  vi plotter.plt 
+ 1063  ./gnuplot plotter.plt 
+ 1064  ls
+ 1065  git add checking_original_times.svg 
+ 1066  git commit -m "seem to have some problems with data. checking if this is due to groupings."
+ 1067  git push https://github.com/pfarrow75/cs131
+ 1068  vi plotter.plt 
+ 1069  ./gnuplot plotter.plt 
+ 1070  git add checking_original_times2.svg 
+ 1071  git commit -m "seem to have some problems with data. checking if this is due to groupings."
+ 1072  git push https://github.com/pfarrow75/cs131
+ 1073      132 22.30
+ 1074      132 22.45
+ 1075      127 23.00
+ 1076      116 23.15
+ 1077       92 23.30
+ 1078      109 23.45
+ 1079       38 24.00
+ 1080  vi plotter.plt 
+ 1081  ./gnuplot plotter.plt 
+ 1082  git add checking_original_times2.svg 
+ 1083  git commit -m "seem to have some problems with data. checking if this is due to groupings."
+ 1084  git push https://github.com/pfarrow75/cs131
+ 1085  git add checking_original_times3.svg 
+ 1086  git commit -m "seem to have some problems with data. checking if this is due to groupings."
+ 1087  git push https://github.com/pfarrow75/cs131
+ 1088  vi plotter.plt 
+ 1089  ./gnuplot plotter.plt 
+ 1090  git add checking_original_times4.svg 
+ 1091  git commit -m "seem to have some problems with data. checking if this is due to groupings."
+ 1092  git push https://github.com/pfarrow75/cs131
+ 1093  ls ../../
+ 1094  vi plotter.plt 
+ 1095  ./gnuplot plotter.plt 
+ 1096  head -5 ../../rt_sorted.csv 
+ 1097  vi plotter.plt 
+ 1098  ./gnuplot plotter.plt 
+ 1099  ls
+ 1100  git add final_retweeted_times.svg 
+ 1101  git add final_replied_times.svg 
+ 1102  mv checking_original_times4.svg final_original_times.svg
+ 1103  ls
+ 1104  git add final_original_times.svg 
+ 1105* 
+ 1106  git push https://github.com/pfarrow75/cs131
+ 1107  git add plotter.plt 
+ 1108  git commit -m "plotter updated to work I think"
+ 1109  git push https://github.com/pfarrow75/cs131
+ 1110  cd ..
+ 1111  rm cmd.logs 
+ 1112  history > cmd.logs

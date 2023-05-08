@@ -1,0 +1,246 @@
+  111  history
+  112  head -4 tweets.csv 
+  113  cut -f3,7 tweets.csv 
+  114  cut -f7 tweets.csv 
+  115  cut -f8 tweets.csv 
+  116  grep 'replied' tweets.csv 
+  117  cut -f5 tweets.csv 
+  118  vi splitter.sh
+  119  ls
+  120  head -1 tweets.csv 
+  121  id      author  date    hashtags        referenced      in_reply_to_user_id     public_metrics  text_nolf
+  122  grep 'type=retweeted' > retweeted_tweets.csv
+  123  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
+  124  grep 'type=replied_to' tweets.csv > retweeted_tweets.csv
+  125  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" file.tsv > filtered_file.tsv
+  126  grep -v "^\S*\t\S*\t\S*\t\S*\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
+  127  grep type original_tweets.tsv 
+  128  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsv
+  129  grep type original_tweets.tsv 
+  130  grep 'type=retweeted' tweets.csv > retweeted_tweets.csv
+  131  wc -l retweeted_tweets.csv 
+  132  grep 'type=replied_to' tweets.csv > replied_tweets.csv
+  133  wc -l replied_tweets.csv 
+  134  wc -l tweets.csv 
+  135  wc -l original_tweets.tsv 
+  136  grep -v "^\S*\t\S*\t\S*\t\t\t\S*\t\S*\t\S*$" tweets.csv > original_tweets.tsvrm original_tweets.tsv 
+  137  ls
+  138  rm original_tweets.tsv
+  139  rm original_tweets.tsvrm 
+  140  grep -v 'type=replied' tweets.csv | grep -v 'type=retweeted' > original_tweets.csv
+  141  wc -l original_tweets.csv 
+  142  vi plotter.plt
+  143  ls
+  144  gnuplot
+  145  gnuplot --version
+  146  apt-get install gnuplot
+  147  pip install gnuplot
+  148  cd ..
+  149  cd a3
+  150  gnuplot --version
+  151  cd ..
+  152  cd a5
+  153  ls
+  154  wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz
+  155  gzip -d gnuplot-5.4.6.tar.gz
+  156  tar xvf gnuplot-5.4.6.tar
+  157  cd gnuplot-5.4.6/
+  158  ./configure --disable-dependency-tracking
+  159  make
+  160  make check
+  161  ls
+  162  cd src
+  163  ls
+  164  pwd
+  165  vi plotter.plt
+  166  find plotter.plt
+  167  chmod +x plotter.plt 
+  168  ls
+  169  gnuplot plotter.plt 
+  170  ./gnuplot plotter.plt
+  171  cd ..
+  172  l
+  173  cd ..
+  174  ls
+  175  cd gnuplot-5.4.6/
+  176  cd src/
+  177  vi plotter.plt 
+  178  ./gnuplot plotter.plt
+  179  "plotter.plt" line 7: Both parameters to strptime must be strings
+  180  vi plotter.plt 
+  181  ./gnuplot plotter.plt
+  182  "plotter.plt" line 7: f_sprintf: attempt to print numeric value with string format
+  183  vi plotter.plt 
+  184  ./gnuplot plotter.plt
+  185  cd ..
+  186  head -2 original_tweets.csv 
+  187  cd gnuplot-5.4.6/
+  188  cd src/
+  189  vi plotter.plt 
+  190  ./gnuplot plotter.plt
+  191  vi plotter.plt 
+  192  ./gnuplot plotter.plt
+  193  vi plotter.plt 
+  194  ./gnuplot plotter.plt
+  195  ls
+  196  rm original_times.svg 
+  197  vi plotter.plt 
+  198  ./gnuplot plotter.plt
+  199  git status
+  200  git add original_times.svg 
+  201  cd ..
+  202  git commit -m "checking svg errors"
+  203  git push
+  204  git status
+  205  git push
+  206  git push https://github.com/pfarrow75/cs131
+  207  head -4 original_tweets.csv 
+  208  cut -f3 > filtered_originals.csv
+  209  cut -f3 original_tweets.csv > filtered_originals.csv
+  210  head - 4 filtered_originals.csv 
+  211  head -4 filtered_originals.csv 
+  212  cd gnuplot-5.4.6/src/
+  213  vi plotter.plt 
+  214  ls
+  215  rm original_times.svg 
+  216  ./gnuplot plotter.plt
+  217  cd ..
+  218  ls
+  219  head -4 filtered_
+  220  head -4 filtered_originals.csv 
+  221  head -1 filtered_file.tsv 
+  222  wc filtered_file.tsv 
+  223  rm filtered_file.tsv 
+  224  cut -d' ' -f2 filtered_originals.csv 
+  225  cut -d' ' -f2 filtered_originals.csv > original_times
+  226  cut -d' ' -f2 filtered_originals.csv > original_times.csv
+  227  ls
+  228  rm original_times
+  229  ls
+  230  sed -i 's/:/./g' original_times.csv 
+  231  head -5 original_times.csv 
+  232  cut -d'.' -f1,2 original_times.csv 
+  233  cut -d'.' -f1,2 original_times.csv > original_time_vals.csv
+  234  uniq -c original_time_vals.csv 
+  235  uniq -c original_time_vals.csv | sort -nr
+  236  uniq -c original_time_vals.csv | sort -nr | head -2
+  237  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv 
+  238  awk -F ',' '{ printf("%.2f\n", (int(($1*60+7.5)/15)*15)/60); }' original_time_vals.csv  | grep 75
+  239  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
+  240  cat original_time_vals.csv 
+  241  awk -F ',' '{ printf("%.2f\n", sprintf("%.0f", $1*4)/4); }' original_time_vals.csv 
+  242  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' input.csv > output.csv
+  243  awk -F ',' '{ printf("%.2f\n", (int((($1+0.025)*60+7.5)/15)*15)/60); }' original_time_vals.csv 
+  244  awk -F ',' '{ printf("%.2f\n", int(($1*60+7.5)/15)*15/60); }' original_time_vals.csv 
+  245  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' input.csv > output.csv
+  246  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
+  247  cat original_time_vals.csv 
+  248  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv 
+  249  cat original_time_vals.csv 
+  250  awk -F '.' '{ printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }' original_time_vals.csv 
+  251  awk -F '.' '{ printf("%02d.%02d\n", int((($1*60+$2+7.5)/15)*15/60), int((($1*60+$2+7.5)/15)*15%60)); }' original_time_vals.csv awk: cmd. line:1: { printf("%02d.%02d\n", int(($1*60+$2+7.5)/15)*15/60), int((int(($1*60+$2+7.5)/15)*15)%60)); }
+  252  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
+  253  cat original_time_vals.csv 
+  254  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv 
+  255  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr 
+  256  awk -F '.' '{printf "%02d.%02d\n",int(($1*60+$2+7.5)/15)*15/60,int((int(($1*60+$2+7.5)/15)*15)%60)}' original_time_vals.csv | sort | uniq -c | sort -nr > plot_og.csv
+  257  cut -f2 plot_og.csv 
+  258  ls
+  259  cd gnuplot-5.4.6/
+  260  cd src/
+  261  ls
+  262  rm original_times.svg 
+  263  vi plotter.plt 
+  264  ./gnuplot plotter.plt 
+  265  set terminal
+  266  ./gnuplot 
+  267  vi plotter.plt 
+  268  ls
+  269  ./gnuplot plotter.plt 
+  270  vi plotter.plt 
+  271  ./gnuplot plotter.plt 
+  272  cd ..
+  273  ls
+  274  cd gnuplot-5.4.6/
+  275  cd src/
+  276  ls
+  277  rm originals.svg 
+  278  vi plotter.plt 
+  279  ./gnuplot plotter.plt 
+  280  ls
+  281  git add originals.svg 
+  282  git status
+  283  git commit -m "tried new way hoping for best" 
+  284  git push 
+  285  git push https://github.com/pfarrow75/cs131
+  286  cd ..
+  287  ls
+  288  sort -k2 plot_og.csv 
+  289  sort -k2 plot_og.csv  >> sorted_plot.csv
+  290  ls
+  291  cd gnuplot-5.4.6/src/
+  292  vi plotter.plt 
+  293  cd .. 
+  294  cd ..
+  295  ls
+  296  cd gnuplot-5.4.6/src/
+  297  vi plotter.plt 
+  298  ./gnuplot plotter.plt 
+  299  vi plotter.plt 
+  300  ./gnuplot plotter.plt 
+  301  rm originals.svg 
+  302  ./gnuplot plotter.plt 
+  303  ls
+  304  git add originals.svg 
+  305  git commit -m "clean up on it" 
+  306  git push https://github.com/pfarrow75/cs131
+  307  vi plotter.plt 
+  308  ls
+  309  vi plotter.plt 
+  310  ls -la
+  311  rm .plotter.plt.swp 
+  312  vi plotter.plt 
+  313  rm originals.svg 
+  314  ./gnuplot plotter.plt 
+  315  vi plotter.plt 
+  316  ./gnuplot plotter.plt 
+  317  ls
+  318  git add originals.svg
+  319  git commit -m "adding spacing" 
+  320  git status
+  321  ls
+  322  git add originals.svg 
+  323  git status
+  324  git push https://github.com/pfarrow75/cs131
+  325  git add originals.svg
+  326  git commit -m "adding space to graph"
+  327  git push
+  328  vi plotter.plt 
+  329  git add originals2.svg
+  330  ls
+  331  ./gnuplot plotter.plt 
+  332  git add originals2.svg
+  333  git commit -m "adding space" 
+  334  git push https://github.com/pfarrow75/cs131
+  335  git pull
+  336  git pull https://github.com/pfarrow75/cs131
+  337  git status
+  338  ls
+  339  git add originals2.svg 
+  340  git commit -m "please look better now" 
+  341  mv originals2.svg ../../originalGraph.svg
+  342  cd ..
+  343  ls
+  344  git add originalGraph.svg 
+  345  git status
+  346  git commit -m "please work for all things good"
+  347  git push https://github.com/pfarrow75/cs131
+  348  cd gnuplot-5.4.6/src/
+  349  vi plotter.plt 
+  350  ./gnuplot plotter.plt 
+  351  ls
+  352  git add originals3.svg 
+  353  git commit -m "another attempt to make graph more readable"
+  354  git push https://github.com/pfarrow75/cs131
+  355  cd ..
+  356  history > cmd.logs
